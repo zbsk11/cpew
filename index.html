@@ -17,6 +17,43 @@
 
     <script src="javascript2.js"></script>
     
+
+    <style>
+
+        section {
+            text-align: center; /* Center-align content within the section */
+        }
+                img {
+            width: 200px; /* Adjust the width as per your preference */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            display: inline-block; /* Display images side by side */
+            margin-right: 20px; /* Add spacing between images */
+            }
+        
+            img:nth-of-type(2), img:nth-of-type(3) {
+            width: 380px; /* Adjust the width as per your preference */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            display: inline-block; /* Display images side by side */
+            margin-right: 20px; /* Add spacing between images */
+        }
+        
+        #play-button {
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80px;
+                    height: 80px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+            </style>
+
+
 </head>
 <body>
 <!-- header section starts -->   
@@ -66,13 +103,52 @@
         </ul> -->
     </div>
     
-    <a target="_blank" href="images2/calendar.pdf" class="btn4">view calender</a>
+   <!-- <a target="_blank" href="images2/calendar.pdf" class="btn4">view calender</a> -->  
     
 </section>
     
 <!-- home section ends -->   
+
+
+
+
+
+
+
     
+<section>
+    <h1>Summer Class Event</h1>
     
+    <!-- Two Images -->
+    <img src="images2/summer.PNG" alt="Image 1">
+    <img src="images2/football1.jpg" alt="Image 2">
+    <img src="images2/football2.jpg" alt="Image 3">
+    
+    <!-- Text Explanation -->
+    <p>
+        A huge thanks for all the teachers, parents and Volunteers that helped run our summer class this year. The students thoroughly enjoyed their time, making significant progress in their studies. We concluded the classes this year with a fun day in the park, where the children enjoyed themselves playing football and other sports.
+    </p>
+</section>
+
+<section>
+    <h2>Video</h2>
+    
+    <!-- Video 1 (Football3) -->
+    <video id="myVideo" width="560" height="315" loop muted>
+        <source src="images2/football3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Play Button -->
+    <button id="play-button">&#9658;</button>
+</section>
+
+
+
+
+
+
+
     
 <!-- events section starts -->  
     
@@ -92,7 +168,7 @@
                     <span>educational travel</span>
                     <h3>Cambridge eco mosque</h3>
                     <p>The mosque trip to Cambridge Eco Mosque was an enlightening experience<br>for both the adults and kids, and it was something great for our community.</p>
-                    <a href="" class="btn">discover more</a>
+                    
                 </div>
             </div>
             
@@ -102,7 +178,7 @@
                     <span>lockdown, eid prayer</span>
                     <h3>eid salah in the park</h3>
                     <p>Last year, as a mosque, we faced the challenge of how to conduct Eid salah (prayer)<br>while following Covid guidelines. After careful consideration, we decided to hold the prayer outdoors in a nearby park.<br>This required meticulous planning and coordination with local authorities, but the effort was worth it.<br>On the day of the prayer, we were overwhelmed with the turnout and the positive feedback we received from the community.</p>
-                    <a href="" class="btn">discover more</a>
+                    
                 </div>
             </div>
             
@@ -112,7 +188,7 @@
                     <span>community, fundraiser in the park</span>
                     <h3>football tournament</h3>
                     <p>Our center hosted a football tournament for both men and children in the community.<br>The event was a huge success, with many participants and spectators alike enjoying the day's festivities.<br>The competition was fierce, with teams from various backgrounds and skill levels competing against one another.<br>many of the young players showed exceptional talent and enthusiasm and at the end of the day,<br>trophies and medals were awarded to the winners, creating a sense of pride and accomplishment among the participants.</p>
-                    <a href="" class="btn">discover more</a>
+                    
                 </div>
             </div>
             
@@ -122,7 +198,7 @@
                     <span>hosted iftar event, impressions hall</span>
                     <h3>muslim belal, talkshow event</h3>
                     <p>This Ramadan, our center hosted a memorable iftar event at Impressions Hall, which sold out completely.<br>The event was a huge success, with sponsorships from various brands, including Sunah Musk, and raffles held throughout the night.<br>The main event speaker, Muslim Belal, took to the stage and shared inspiring stories and Nasheeds, captivating the audience.<br>The night was filled with joy and celebration as members of the community gathered to break their fasts together.<br>The event was also a fundraiser, and we were thrilled to raise over £30,000 for our center's initiatives.<br>The overwhelming support from the community, combined with the powerful messages shared by the speakers, made for an unforgettable evening.<br>Overall, it was a testament to the generosity and spirit of our community, and we look forward to hosting more events like this in the future.</p>
-                    <a href="" class="btn">discover more</a>
+                    
                 </div>
             </div>
             
@@ -381,7 +457,28 @@ enrolment section ends -->
     </section>
     
 <!-- footer section ends -->  
-    
+ 
+<script>
+    // JavaScript code to handle video play button
+    const video = document.getElementById('myVideo');
+    const playButton = document.getElementById('play-button');
+
+    playButton.addEventListener('click', function () {
+        if (video.paused) {
+            video.play();
+            playButton.style.display = 'none'; // Hide the play button when video is playing
+        } else {
+            video.pause();
+        }
+    });
+
+    // Hide the play button when the video ends
+    video.addEventListener('ended', function () {
+        playButton.style.display = 'block';
+    });
+</script>
+
+
 <script>
     // get the current date
     const date = new Date();
