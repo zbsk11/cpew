@@ -309,6 +309,15 @@ header .fa-bars{
     color: wheat;
 }
 
+.summer{
+    background: #eee;
+    padding-top: 640px;
+}
+
+.play-button{
+    transform: translateY(640px);
+}
+
 
 .events{
     padding: 0;
@@ -434,9 +443,13 @@ header .fa-bars{
 
 
 
+.summer .video p{
+    transform: translateY(20px);
+}
+
+
 .donate{
     background: #fff;
-    margin-top: 600px;
 }
 
 .donate .row{
@@ -484,6 +497,14 @@ header .fa-bars{
     background: rgb(245,245,245);
 }
 
+.classes .btn5{
+    display: none;
+}
+
+.classes .btn3{
+    display: none;
+}
+
 .classes .container {
     width: 100%;
     display: flex;
@@ -523,7 +544,7 @@ header .fa-bars{
 .classes .overlay {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-color: var(--main-color-classes);
     opacity: 0;
     transition: height linear 0.4s, opacity linear 0.2s;
@@ -1181,7 +1202,18 @@ header .fa-bars{
 
         .donate {
             margin-top: 350px;
-          }
+        }
+
+        .classes .btn5{
+            transform: translateX(47px);
+            display: flex;
+        }
+        
+        .classes .btn3{
+            margin-top: 5%;
+            display: inline-block;
+        }
+        
 
         .footer .box-container .box h3{
             color: #fff;
